@@ -1,0 +1,24 @@
+Xss.txt
+
+
+https://github.com/payloadbox/xss-payload-list
+
+https://roadmap.sh/cyber-security
+
+https://github.com/Hack-with-Github/Awesome-Hacking
+
+localturnal
+
+aws instead
+
+hacktricks
+https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/git
+
+
+https://github.com/digininja/DVWA
+
+https://github.com/juice-shop/juice-shop
+
+juice shop
+
+network chuck
