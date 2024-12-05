@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decode Huff File</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'huffman.css' %}">
+</head>
+<body>
+  <div class="parallax">
+    <header class="header">
+      <h1 class="glowing-text">Huff File Decoder</h1>
+      <p class="subheading">Transform Your Compressed Huff Files Back to Original Format</p>
+    </header>
+
+    <section class="content">
+      <!-- Modify form to use POST method and enctype for file upload -->
+      <form class="form" method="POST" enctype="multipart/form-data" action="{% url 'decode' %}">
+        {% csrf_token %}
+        <label for="fileInput" class="label">Choose a Compressed Huff File to Decode:</label>
+        <input type="file" id="fileInput" name="file" accept=".huff" required>
+        <button type="submit" class="button encode-btn">Decode</button>
+      </form>
+      {% if download_url %}
+
+      <!-- Conditionally display the download button if the file has been decoded -->
+        <p>File decoded successfully. Download the file <a href="{% url 'downloadDe' %}"  download class="button encode-btn">here</a>.</p>
+        {% endif %}
+
+
+      <a href="{% url 'encode' %}" class="button">Switch to Encoder</a>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p>Designed with 💻 and 🎨 by Futuristic Coders</p>
+  </footer>
+</body>
+</html>

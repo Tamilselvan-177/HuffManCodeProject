@@ -1,0 +1,586 @@
+Subject
+
+
+
+
+Plain_Text
+
+https://www.quora.com/How-do-you-show-that-the-vectors-1-2-1-2-1-0-1-2-2-form-a-basis-for-R3//
+C++ implementation to print
+// the given pattern
+#include <stdio.h>
+
+
+
+// Function to find the sum of
+// N integers from 1 to N
+
+int sum(int n)
+{
+
+    return n * (n - 1) / 2;
+}
+
+// Function to print the given
+// pattern
+
+void BSpattern(int N)
+{
+
+    int Val = 0, Pthree = 0,cnt = 0, initial;
+
+
+    char s[] = "**";
+
+
+    // Iterate over [0, N - 1]
+
+    for (int i = 0; i < N; i++) {
+
+        cnt = 0;
+
+
+        // Sub-Pattern - 1
+
+        if (i > 0) {
+
+            printf("%s",s);
+
+            s= s + "**";
+
+        }
+
+
+        // Sub-Pattern - 2
+
+        for (int j = i; j < N; j++) {
+
+
+            // Count the number of element
+
+            // in rows and sub-pattern 2 and 3
+
+            // will have same rows
+
+            if (i > 0) {
+
+                cnt++;
+
+            }
+
+            // Increment Val to print the
+
+            // series 1, 2, 3, 4, 5 ...
+
+            printf("%d",++Val);
+
+             printf("%d",0);
+
+        }
+
+
+        // To get the first element of sub
+
+        // pattern 3 find the sum of first N-1
+
+        // elements first N-1 elements in row1
+
+        // previous of Sub-Pattern 2
+
+
+        // Finally, add the (N-1)th element
+
+        // i.e., 5 and increment it by 1
+
+        if (i == 0) {
+
+            int Sumbeforelast = sum(Val) * 2;
+
+            Pthree = Val + Sumbeforelast + 1;
+
+            initial = Pthree;
+
+        }
+
+
+        // Initial is used to give the initial
+
+        // value of the row in Sub-Pattern 3
+
+        initial = initial - cnt;
+
+
+        Pthree = initial;
+
+
+        // Sub-Pattern 3
+
+        for (int k = i; k < N; k++) {
+
+
+            printf("%d",Pthree++);
+
+
+            // Skip printing zero at the last
+
+            if (k != N - 1) {
+                printf("%d",0);
+
+
+            }
+
+        }
+
+
+        printf("\n");
+
+    }
+}
+
+// Driver Code
+
+int main()
+{
+
+    // Given N
+
+    int N = 5;
+
+
+    // Function Call
+
+    BSpattern(N);
+
+    return 0;
+}
+
+
+
+Plain_HTML
+
+[https://www.quora.com/How= -do-you-show-that-the-
+vectors-1-2-1-2-1-0-1-2-2-form-a-basis-for-R3//](3D"https://www.quora.com/How-
+do-you-show-that-the=) C= ++ implementation to print=C2=A0
+
+// the given pattern=C2= =A0
+
+#include <stdio.h>=C2=A0
+
+  
+
+  
+
+=C2=A0
+
+<= div dir=3D"auto">// Function to find the sum of=C2=A0
+
+// N integers from 1 to N=C2=A0
+
+  
+
+int sum(int n)=C2=A0
+
+{=C2=A0
+
+  
+
+=C2=A0 =C2=A0 return n * (n - 1) / 2;= =C2=A0
+
+}=C2=A0
+
+=C2=A0
+
+// Function to print the given=C2=A0
+
+// pattern=C2=A0
+
+  
+
+void B= Spattern(int N)=C2=A0
+
+{=C2=A0
+
+  
+
+=C2=A0 =C2=A0 int Val =3D 0, Pthree =3D 0,cnt = =3D 0, initial;=C2=A0
+
+=C2=A0
+
+=  
+
+=C2=A0 =C2=A0 char s[] =3D "**";=C2= =A0
+
+=C2=A0
+
+  
+
+=C2=A0 =C2=A0 // Iterate over [0, N - 1]=C2=A0
+
+  
+
+=C2=A0 =C2=A0 for (int i =3D 0; i < N; = i++) {=C2=A0
+
+  
+
+=C2=A0 =C2= =A0 =C2=A0 =C2=A0 cnt =3D 0;=C2=A0
+
+=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 // Sub= -Pattern - 1=C2=A0
+
+  
+
+=C2= =A0 =C2=A0 =C2=A0 =C2=A0 if (i > 0) {=C2=A0
+
+  
+<= /div>
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 printf(&qu;= ot;%s",s);=C2=A0
+
+  
+
+= =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 s=3D s + "**";=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2= =A0 }=C2=A0
+
+=C2=A0
+
+  
+
+=
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 // Sub-Pattern - 2=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 = for (int j =3D i; j < N; j++) {=C2=A0
+
+=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 = =C2=A0 =C2=A0 // Count the number of
+element=C2=A0
+
+<= br>
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // in = rows and sub-pattern 2 and
+3=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // will have same rows= =C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2= =A0 =C2=A0 =C2=A0 =C2=A0 if (i > 0) {=C2=A0
+
+  
+<= /div>
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2= =A0 cnt++;=C2=A0
+
+  
+
+=C2=A0 = =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // Increment V= al to print
+the=C2=A0
+
+  
+
+= =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // series 1, 2, 3, 4, 5 ...=C2=A0=
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 = =C2=A0 =C2=A0 =C2=A0 printf("%d",++Val);
+
+<= br>
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0= printf("%d",0);=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 }=C2=A0
+
+=C2=A0=
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 = =C2=A0 // To get the first element of sub=C2=A0
+
+  
+=
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 // pattern 3 find the s= um of first N-1=C2=A0
+
+  
+
+= =C2=A0 =C2=A0 =C2=A0 =C2=A0 // elements first N-1 elements in row1=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2= =A0 // previous of Sub-Pattern 2=C2=A0
+
+=C2=A0
+
+<= div dir=3D"auto">  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 //= Finally, add the (N-1)th element=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 // i.e., 5 and increment it by = 1=C2=A0
+
+  
+
+=C2=A0 =C2=A0 = =C2=A0 =C2=A0 if (i =3D=3D 0) {=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 int Sumbeforelast = =3D sum(Val) *
+2;=C2=A0
+
+  
+
+= =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 Pthree =3D Val + Sumbeforelast + =
+1;=C2=A0
+
+  
+
+=C2=A0 =C2=A0 = =C2=A0 =C2=A0 =C2=A0 =C2=A0 initial =3D Pthree;=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 }=C2=A0
+
+=C2=A0
+
+  
+
+=C2= =A0 =C2=A0 =C2=A0 =C2=A0 // Initial is used to give the initial=C2=A0
+
+=
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 /= / value of the row in Sub-Pattern 3=C2=A0
+
+  
+
+=
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 initial =3D initial - cnt;=C2= =A0
+
+=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 Pthree =3D initial;=C2=A0
+
+=C2=A0
+
+  
+
+=C2= =A0 =C2=A0 =C2=A0 =C2=A0 // Sub-Pattern 3=C2=A0
+
+  
+=
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 for (int k =3D i; k <= ; N; k++) {=C2=A0
+
+=C2=A0
+
+  
+=
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 printf(&q;= uot;%d",Pthree++);=C2=A0
+
+=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 = =C2=A0 // Skip printing zero at the
+last=C2=A0
+
+  
+<= /div>
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 if (k !=3D= N - 1) {=C2=A0
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 = =C2=A0 =C2=A0 =C2=A0 printf("%d",0);
+
+=C2= =A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 }=C2=A0
+
+=C2=A0
+
+  
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 printf("\n");=C2=A0
+
+  
+
+=C2=A0 =C2=A0 }=C2=A0
+
+}=C2=A0
+
+=C2=A0
+
+// D= river Code=C2=A0
+
+  
+
+int mai= n()=C2=A0
+
+{=C2=A0
+
+  
+
+<= div dir=3D"auto">=C2=A0 =C2=A0 // Given N=C2=A0
+
+  
+=
+
+=C2=A0 =C2=A0 int N =3D 5;=C2=A0
+
+=C2=A0
+
+  
+
+=C2=A0 =C2= =A0 // Function Call=C2=A0
+
+  
+
+=C2=A0 =C2=A0 BSpattern(N);=C2=A0
+
+  
+
+=C2=A0 =C2=A0 return 0;=C2=A0
+
+}=C2=A0
+
+
+
+
+HTML
+
+<div dir=3D"auto"><a href=3D"https://www.quora.com/How-do-you-show-that-the=
+-vectors-1-2-1-2-1-0-1-2-2-form-a-basis-for-R3//">https://www.quora.com/How=
+-do-you-show-that-the-vectors-1-2-1-2-1-0-1-2-2-form-a-basis-for-R3//</a> C=
+++ implementation to print=C2=A0<div dir=3D"auto">// the given pattern=C2=
+=A0</div><div dir=3D"auto">#include &lt;stdio.h&gt;=C2=A0</div><div dir=3D"=
+auto"><br></div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0</div><=
+div dir=3D"auto">// Function to find the sum of=C2=A0</div><div dir=3D"auto=
+">// N integers from 1 to N=C2=A0</div><div dir=3D"auto"><br></div><div dir=
+=3D"auto">int sum(int n)=C2=A0</div><div dir=3D"auto">{=C2=A0</div><div dir=
+=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 return n * (n - 1) / 2;=
+=C2=A0</div><div dir=3D"auto">}=C2=A0</div><div dir=3D"auto">=C2=A0</div><d=
+iv dir=3D"auto">// Function to print the given=C2=A0</div><div dir=3D"auto"=
+>// pattern=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">void B=
+Spattern(int N)=C2=A0</div><div dir=3D"auto">{=C2=A0</div><div dir=3D"auto"=
+><br></div><div dir=3D"auto">=C2=A0 =C2=A0 int Val =3D 0, Pthree =3D 0,cnt =
+=3D 0, initial;=C2=A0</div><div dir=3D"auto">=C2=A0</div><div dir=3D"auto">=
+<br></div><div dir=3D"auto">=C2=A0 =C2=A0 char s[] =3D &quot;**&quot;;=C2=
+=A0</div><div dir=3D"auto">=C2=A0</div><div dir=3D"auto"><br></div><div dir=
+=3D"auto">=C2=A0 =C2=A0 // Iterate over [0, N - 1]=C2=A0</div><div dir=3D"a=
+uto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 for (int i =3D 0; i &lt; N; =
+i++) {=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 cnt =3D 0;=C2=A0</div><div dir=3D"auto">=C2=A0</div><div =
+dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 // Sub=
+-Pattern - 1=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 if (i &gt; 0) {=C2=A0</div><div dir=3D"auto"><br><=
+/div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 printf(&qu=
+ot;%s&quot;,s);=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 s=3D  s + &quot;**&quot;;=C2=A0</=
+div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 }=C2=A0</div><div dir=3D"auto">=C2=A0</div><div dir=3D"auto"><br></div>=
+<div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 // Sub-Pattern - 2=C2=A0</div=
+><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+for (int j =3D i; j &lt; N; j++) {=C2=A0</div><div dir=3D"auto">=C2=A0</div=
+><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 // Count the number of element=C2=A0</div><div dir=3D"auto"><=
+br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // in =
+rows and sub-pattern 2 and 3=C2=A0</div><div dir=3D"auto"><br></div><div di=
+r=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // will have same rows=
+=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 if (i &gt; 0) {=C2=A0</div><div dir=3D"auto"><br><=
+/div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 cnt++;=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }=C2=A0</div><div dir=3D"auto"><br></div=
+><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // Increment V=
+al to print the=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // series 1, 2, 3, 4, 5 ...=C2=A0=
+</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 printf(&quot;%d&quot;,++Val);</div><div dir=3D"auto"><=
+br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+printf(&quot;%d&quot;,0);=C2=A0</div><div dir=3D"auto"><br></div><div dir=
+=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 }=C2=A0</div><div dir=3D"auto">=C2=A0=
+</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 // To get the first element of sub=C2=A0</div><div dir=3D"auto"><br>=
+</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 // pattern 3 find the s=
+um of first N-1=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 // elements first N-1 elements in row1=C2=A0</d=
+iv><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 // previous of Sub-Pattern 2=C2=A0</div><div dir=3D"auto">=C2=A0</div><=
+div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 //=
+ Finally, add the (N-1)th element=C2=A0</div><div dir=3D"auto"><br></div><d=
+iv dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 // i.e., 5 and increment it by =
+1=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 if (i =3D=3D 0) {=C2=A0</div><div dir=3D"auto"><br></div><div=
+ dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 int Sumbeforelast =
+=3D sum(Val) * 2;=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 Pthree =3D Val + Sumbeforelast + =
+1;=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 initial =3D Pthree;=C2=A0</div><div dir=3D"auto=
+"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 }=C2=A0</div><div=
+ dir=3D"auto">=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 // Initial is used to give the initial=C2=A0</div>=
+<div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 /=
+/ value of the row in Sub-Pattern 3=C2=A0</div><div dir=3D"auto"><br></div>=
+<div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 initial =3D initial - cnt;=C2=
+=A0</div><div dir=3D"auto">=C2=A0</div><div dir=3D"auto"><br></div><div dir=
+=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 Pthree =3D initial;=C2=A0</div><div d=
+ir=3D"auto">=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 // Sub-Pattern 3=C2=A0</div><div dir=3D"auto"><br>=
+</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 for (int k =3D i; k &lt=
+; N; k++) {=C2=A0</div><div dir=3D"auto">=C2=A0</div><div dir=3D"auto"><br>=
+</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 printf(&q=
+uot;%d&quot;,Pthree++);=C2=A0</div><div dir=3D"auto">=C2=A0</div><div dir=
+=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 // Skip printing zero at the last=C2=A0</div><div dir=3D"auto"><br><=
+/div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 if (k !=3D=
+ N - 1) {=C2=A0</div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 printf(&quot;%d&quot;,0);</div><div dir=3D"auto">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0</div><div dir=3D"auto"><br></div><div dir=
+=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }=C2=A0</div><div dir=
+=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 }=C2=A0</=
+div><div dir=3D"auto">=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"a=
+uto">=C2=A0 =C2=A0 =C2=A0 =C2=A0 printf(&quot;\n&quot;);=C2=A0</div><div di=
+r=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=A0 }=C2=A0</div><div dir=
+=3D"auto">}=C2=A0</div><div dir=3D"auto">=C2=A0</div><div dir=3D"auto">// D=
+river Code=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">int mai=
+n()=C2=A0</div><div dir=3D"auto">{=C2=A0</div><div dir=3D"auto"><br></div><=
+div dir=3D"auto">=C2=A0 =C2=A0 // Given N=C2=A0</div><div dir=3D"auto"><br>=
+</div><div dir=3D"auto">=C2=A0 =C2=A0 int N =3D 5;=C2=A0</div><div dir=3D"a=
+uto">=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=A0 =C2=
+=A0 // Function Call=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"aut=
+o">=C2=A0 =C2=A0 BSpattern(N);=C2=A0</div><div dir=3D"auto"><br></div><div =
+dir=3D"auto">=C2=A0 =C2=A0 return 0;=C2=A0</div><div dir=3D"auto">}=C2=A0</=
+div></div>
+
+
+

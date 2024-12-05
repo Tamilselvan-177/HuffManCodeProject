@@ -1,0 +1,7 @@
+/your-project
+├── /public
+│   ├── index.html
+│   ├── spotifyjs.js
+│   └── spotifycss.css
+├── spotifyTrackData.js
+└── server.js
